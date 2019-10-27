@@ -3,18 +3,24 @@
  本节任务
 
 1. MyBatis框架介绍
+
 2. MyBatis的基本数据交互方式
+
 3. MyBatis基础配置
+
 4. MyBatis环境搭建
+
 5. MyBatis的基础CRUD操作
 
-<!-- GFM-TOC -->
+   
+  
+  <!-- GFM-TOC -->
+  
+  * [ 一、mybatis配置文件](# 一、mybatis配置文件)
 
-*[1.2ORM简介](#1.2ORM简介)
-
-<!-- GFM-TOC -->
-
-
+    <!-- GFM-TOC -->
+  
+  
 
 ##  一、mybatis配置文件
 
