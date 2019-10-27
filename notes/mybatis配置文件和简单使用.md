@@ -3,14 +3,14 @@
  本节任务
 
 1. MyBatis框架介绍
-
 2. MyBatis的基本数据交互方式
-
 3. MyBatis基础配置
-
 4. MyBatis环境搭建
-
 5. MyBatis的基础CRUD操作
+
+[TOC]
+
+
 
 ##  一、mybatis配置文件
 
@@ -107,7 +107,7 @@ MyBatis作为ORM框架，其核心思想是剥离出程序中的大量SQL语句�
 
 ### 3. 功能架构 
 
-[img](/notes/img/wpsQAFYku.jpg) 
+![img](/notes/img/wpsQAFYku.jpg)
 
 从图中可以看出，MyBatis的功能架构由三层组成，包括API接口层、数据处理层、基础支撑层
 
@@ -124,7 +124,7 @@ MyBatis作为ORM框架，其核心思想是剥离出程序中的大量SQL语句�
 
 ### 4.MyBatis的工作流程
 
-![ig](/Users/xerxes/Documents/GitHub/JavaFrameworks/notes/img/wpsaD6Qom.jpg) 
+![img](/notes/img/wpsaD6Qom.jpg) 
 
 图中展示了MyBatis的工作流程，具体来说，可分为以下步骤。
 
