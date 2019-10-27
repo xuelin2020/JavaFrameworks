@@ -51,7 +51,7 @@
 
 ### 1、概述
 
-#### 1.1传统JDBC的劣势
+#### 1.1、传统JDBC的劣势
 
 JDBC是Java程序实现数据访问的基础，它提供了一套操作数据库的API，一般通过加载驱动、获取连接、获取执行者对象、发送SQL语句等步骤实现数据库操作。但是，传统的JDBC编程存在一定的局限性，具体如下。
 
@@ -75,7 +75,7 @@ JDBC是Java程序实现数据访问的基础，它提供了一套操作数据库
 
  
 
-#### 1.2ORM简介
+#### 1.2、ORM简介
 
  
 
@@ -108,7 +108,7 @@ Hibernate封装性较高，开发人员通过XML映射文件（或注解）定�
 #### 1.3Myatis简介
 
 
->  Myatis的前身是Apache组织的一个开源项目iBatis，2010年，iBatis由Apache Software Foundation迁移到了Google Code，并且改名为MyBatis。2013年11月迁移到Github，目前MyBatis由Github维护。
+Myatis的前身是Apache组织的一个开源项目iBatis，2010年，iBatis由Apache Software Foundation迁移到了Google Code，并且改名为MyBatis。2013年11月迁移到Github，目前MyBatis由Github维护。
 
 MyBatis 是一款优秀的ORM框架，它支持自定义SQL、存储过程以及高级映射。MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集，它使用XML 文件或注解进行配置和映射，将接口和 Java 的 POJO映射成数据库中的记录。
 
@@ -124,7 +124,7 @@ MyBatis作为ORM框架，其核心思想是剥离出程序中的大量SQL语句�
 
  
 
-### 2.框架特点
+### 2、框架特点
 
 * 简单易学：身就很小且简单。没有任何第三方依赖，最简单安装只要两个jar文件+配置几个sql映射文件易于学习，易于使用，通过文档和源代码，可以比较完全的掌握它的设计思路和实现。
 
@@ -140,7 +140,7 @@ MyBatis作为ORM框架，其核心思想是剥离出程序中的大量SQL语句�
 
  
 
-### 3. 功能架构 
+### 3功能架构 
 
 ![img](/notes/img/wpsQAFYku.jpg)
 
@@ -157,7 +157,7 @@ MyBatis作为ORM框架，其核心思想是剥离出程序中的大量SQL语句�
 
  
 
-### 4.MyBatis的工作流程
+### 4、MyBatis的工作流程
 
 ![img](/notes/img/wpsaD6Qom.jpg) 
 
@@ -173,7 +173,7 @@ MyBatis作为ORM框架，其核心思想是剥离出程序中的大量SQL语句�
 
  
 
-### 5.MyBatis和数据交互的方式
+### 5、MyBatis和数据交互的方式
 
 MyBatis和数据库交互方式主要分两种:
 
@@ -184,7 +184,7 @@ MyBatis和数据库交互方式主要分两种:
 
  
 
-####  5.1 使用传统的MyBatis API
+####  5.1、使用传统的MyBatis API
 
  
 
@@ -198,7 +198,7 @@ MyBatis和数据库交互方式主要分两种:
 
 支持接口（**Interface**）调用方式。
 
-####  5.2 使用Mapper接口
+####  5.2、使用Mapper接口
 
   MyBatis将核心配置文件中的每一个<mapper>节点抽象为一个 Mapper 接口，而这个接口中声明的方法和跟`<mapper>`节点中的`<select|update|delete|insert>`节点项对应，即 `<select|update|delete|insert>`
 
@@ -210,7 +210,7 @@ MyBatis和数据库交互方式主要分两种:
 
 **MyBatis**引用**Mapper**接口这种调用方式，纯粹是为了满足面向接口编程的需要。（其实还有一个原因是在于，面向接口的编程，使得用户在接口上可以使用注解来配置SQL语句，这样就可以脱离XML配置文件，实现“0配置”）
 
-### 6.MyBatis配置文件
+### 6、MyBatis配置文件
 
 #### 6.1核心配置文件
 
@@ -289,7 +289,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 
 
-#### 6.2映射文件
+#### 6.2、映射文件
 
 ​	在指定的目录下创建映射文件，配置要执行的statement，即增删改查等语句。
 
