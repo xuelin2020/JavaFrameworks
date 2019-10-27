@@ -2,7 +2,7 @@
 
 ### 文档
 
-* [mybatis配置文件和简单使用](notes/mybatis配置文件和简单使用.md)
+* [mybatis配置文件和简单使用](mybatis配置文件和简单使用.md)
 * [学习笔记](notes/mybatis配置文件和简单实用学习笔记.md)
 
 ### 文档代码
