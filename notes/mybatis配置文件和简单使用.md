@@ -8,6 +8,14 @@
 4. MyBatis环境搭建
 5. MyBatis的基础CRUD操作
 
+<!-- GFM-TOC -->
+
+*[1.2ORM简介](#1.2ORM简介)
+
+<!-- GFM-TOC -->
+
+
+
 ##  一、mybatis配置文件
 
 ### 1、概述
