@@ -107,7 +107,7 @@ MyBatis作为ORM框架，其核心思想是剥离出程序中的大量SQL语句�
 
 ### 3. 功能架构 
 
-[img](/Users/xerxes/Documents/GitHub/JavaFrameworks/notes/img/wpsQAFYku.jpg) 
+[img](/notes/img/wpsQAFYku.jpg) 
 
 从图中可以看出，MyBatis的功能架构由三层组成，包括API接口层、数据处理层、基础支撑层
 
@@ -157,7 +157,7 @@ MyBatis和数据库交互方式主要分两种:
 
  
 
-![img](/Users/xerxes/Documents/GitHub/JavaFrameworks/notes/img/wpsDxNQhm.jpg) 
+![img](/notes/img/wpsDxNQhm.jpg) 
 
   上述使用**MyBatis**的方法，是创建一个和数据库打交道的**SqlSession**对象，然后根据Statement Id 和参数来操作数据库，这种方式固然很简单和实用，但是它不符合面向对象语言的概念和面向接口编程的编程习惯。由于面向接口的编程是面向对象的大趋势，**MyBatis**为了适应这一趋势，增加了第二种使用MyBatis
 
@@ -169,7 +169,7 @@ MyBatis和数据库交互方式主要分两种:
 
 节点的 id 值为 Mapper 接口中的方法名称，parameterType 值表示 Mapper 对应方法的入参类型，而 resultMap 值则对应了Mapper接口表示的返回值类型或者返回结果集的元素类型。
 
-![img](/Users/xerxes/Documents/GitHub/JavaFrameworks/notes/img/wpsSHxv1I.jpg) 
+![img](/notes/img/wpsSHxv1I.jpg) 
 
   根据**MyBatis**的配置规范配置好后，通过SqlSession.getMapper(XXXMapper.class) 方法，**MyBatis**会根据相应的接口声明的方法信息，通过动态代理机制生成一个**Mapper**实例，我们使用**Mapper**接口的某一个方法时，**MyBatis**会根据这个方法的方法名和参数类型，确定**Statement Id**，底层还是通过SqlSession.select("statementId",parameterObject);或者SqlSession.update("statementId",parameterObject);等等来实现对数据库的操作，
 
