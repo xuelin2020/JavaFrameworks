@@ -16,7 +16,7 @@
   
   <!-- GFM-TOC -->
   
-  * [ 一、mybatis配置文件](# 一、mybatis配置文件)
+  [ 一、mybatis配置文件](# 一、mybatis配置文件)
 
     <!-- GFM-TOC -->
   
