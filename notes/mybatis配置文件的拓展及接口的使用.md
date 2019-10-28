@@ -28,7 +28,7 @@
 
 - 鼠标放到`<configuration>`标签上按`F2`可看到配置文件的配置顺序
 
-![image-20191028210953781](/Users/xerxes/Documents/GitHub/JavaFrameworks/notes/img/image-20191028210953781.png)
+![img](/notes/img/image-20191028210953781.png)
 
 - 不指定外部文件
   - 可以依次在 `<properties>` 标签中配置
@@ -138,7 +138,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 - 打印 mybatis 日志信息
   
-  - ![image-20191028223215815](/Users/xerxes/Documents/GitHub/JavaFrameworks/notes/img/image-20191028223215815.png)
+  - ![img](/notes/img/image-20191028223215815.png)
 - 别名
   - `<typeAlias alias=“myDept” type="com.mybatis.pojo"/>` 表示给pojo包内所有类起别名为`myDept`
   - `<package name="com.mybatis.pojo.Dept"/>`表示给pojo包内 Dept 类起别名，为类名首字母小写
