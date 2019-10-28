@@ -108,13 +108,12 @@ MyBatis的工作流程
 	   }
 	   
 	   ```
-	```
 	   
+	
 	6.在Java Application中运行测试类，打印结果
-	   
-	![image-20191028200312149](/Users/xerxes/Documents/GitHub/JavaFrameworks/notes/img/image-20191028200312149.png)
-	   
+	
+	![image-20191028200312149](/notes/img/image-20191028200312149.png)
+	
 	   7.第一个MyBatis操作完成
-	```
 
 注意：pojo类中的属性名一定要和表中类名一样，否则查出值为空
