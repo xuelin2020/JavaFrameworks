@@ -112,7 +112,7 @@ MyBatis的工作流程
 	
 	6.在Java Application中运行测试类，打印结果
 	
-	![image-20191028200312149](/notes/img/image-20191028200312149.png)
+	![img](/notes/img/image-20191028200312149.png)
 	
 	   7.第一个MyBatis操作完成
 
