@@ -8,7 +8,12 @@
 
 ### 文档代码
 
-* [mybatis的搭建](notes/mybatis的搭建.md)
-* [dem1](notes/dem1.md)
+* [MyBatis的搭建和MyBatis的第一次操作](notes/MyBatis的搭建和MyBatis的第一次操作.md)
+* [mybatis配置文件的拓展及接口的使用](notes/mybatis配置文件的拓展及接口的使用.md)
+* [mybatis完成对数据库的增删改查操作](notes/mybatis完成对数据库的增删改查操作)
 
 ### 小练习
+
+- [练习1](notes/练习1.md)
+- [练习2](notes/练习2.md)
+

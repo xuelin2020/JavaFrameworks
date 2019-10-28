@@ -2,7 +2,7 @@
    <!DOCTYPE mapper
    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-   <mapper namespace="first">
+   <mapper namespace="com.mybatis.dao.DeptMapper">
    	<!-- 别名为 myDept -->
    	<!-- <typeAlias alias=“myDept” type="com.mybatis.pojo"/> -->
 	<!-- 别名改为了 dept -->
