@@ -3,25 +3,20 @@
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<properties resource="db.properties"></properties>
-	<settings>
-		<setting name="mapUnderscoreToCamelCase" value="true"/>
-	</settings>
-	
-	<typeAliases>
-		<!--  <typeAlias type="com.mybites.pojo.Emp" alias="emp"/>-->
-		<package name="com.mybites.pojo"/>
-	</typeAliases>
-	<environments default="test">
-		<environment id="test">
+	<!-- 环境 设置默认环境 -->
+	<environments default="j1903">
+		<environment id="j1903">
 			<!-- 事务 JDBC/ MANAGER-->
 			<transactionManager type="JDBC"></transactionManager>
-			<!-- 数据源  POOLED /NOPOOLED/JNDI-->
+			<!-- 数据源  使用连接池POOLED / NOPOOLED/JNDI-->
 			<dataSource type="POOLED">
-				<property name="driver" value="${jdbc.driverClass}"/>
-				<property name="url" value="${jdbc.url}"/>
-				<property name="username" value="${jdbc.user}"/>
-				<property name="password" value="${jdbc.password}"/>
+        <!-- 属性 连接驱动 -->
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+        <!-- 属性 连接字符串 -->
+				<property name="url" value="jdbc:mysql://127.0.0.1:3306/j1903"/>
+        <!-- 属性 数据库信息 -->
+				<property name="username" value="root"/>
+				<property name="password" value="123456"/>
 			</dataSource>
 		</environment>
 		
@@ -29,8 +24,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	
 	<!-- 映射文件 -->
   <mappers>
-  	 <mapper resource="com/mybites/mapper/EmpDao.xml"/>
-  	<mapper class="com.mybites.mapper.EmpDaoAnnation"/>
-  <!--  <package name="com.mybites.mapper"/>-->	
+     <!-- 映射文件路径 -->
+  	 <mapper resource="com/mybatis/dao/DeptMapper.xml"/>
   </mappers>
 </configuration>
