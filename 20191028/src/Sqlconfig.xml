@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="db.properties"></properties>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<typeAliases>
+		<!--  <typeAlias type="com.mybites.pojo.Emp" alias="emp"/>-->
+		<package name="com.mybites.pojo"/>
+	</typeAliases>
+	<environments default="test">
+		<environment id="test">
+			<!-- 事务 JDBC/ MANAGER-->
+			<transactionManager type="JDBC"></transactionManager>
+			<!-- 数据源  POOLED /NOPOOLED/JNDI-->
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driverClass}"/>
+				<property name="url" value="${jdbc.url}"/>
+				<property name="username" value="${jdbc.user}"/>
+				<property name="password" value="${jdbc.password}"/>
+			</dataSource>
+		</environment>
+		
+	</environments>
+	
+	<!-- 映射文件 -->
+  <mappers>
+  	 <mapper resource="com/mybites/mapper/EmpDao.xml"/>
+  	<mapper class="com.mybites.mapper.EmpDaoAnnation"/>
+  <!--  <package name="com.mybites.mapper"/>-->	
+  </mappers>
+</configuration>

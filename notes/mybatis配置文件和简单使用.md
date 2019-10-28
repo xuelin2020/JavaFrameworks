@@ -105,7 +105,7 @@ Hibernate封装性较高，开发人员通过XML映射文件（或注解）定�
 
  
 
-#### 1.3Myatis简介
+#### 1.3Mybatis简介
 
 
 Myatis的前身是Apache组织的一个开源项目iBatis，2010年，iBatis由Apache Software Foundation迁移到了Google Code，并且改名为MyBatis。2013年11月迁移到Github，目前MyBatis由Github维护。

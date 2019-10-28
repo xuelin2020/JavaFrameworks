@@ -3,13 +3,12 @@
 ### 文档
 
 * [mybatis配置文件和简单使用](mybatis配置文件和简单使用.md)
-* [学习笔记](notes/mybatis配置文件和简单实用学习笔记.md)
+* [学习计划SSM](notes/学习计划SSM.md)
+* [mybatis的入门](notes/mybatis的入门.md)
 
 ### 文档代码
 
-* [Java容器常见面试题/知识点总结](java/collection/Java集合框架常见面试题.md)
+* [mybatis的搭建](notes/mybatis的搭建.md)
+* [dem1](notes/dem1.md)
 
 ### 小练习
-
-* [Java 并发基础常见面试题总结](java/Multithread/JavaConcurrencyBasicsCommonInterviewQuestionsSummary.md)
-
