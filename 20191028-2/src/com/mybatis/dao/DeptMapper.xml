@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   	<!-- 命名空间，可以随意些，只要不冲突 -->
+   <mapper namespace="first">
+   	<!-- 使用select查询标签查询表内所有信息 -->
+     <!-- 如果自己写方法此方法返回一个集合为Dept类型的值，
+   				resultType后边填写返回集合中的元素类型 -->
+   	<select id="getAllDept" resultType="com.mybatis.pojo.Dept">
+   		select * from dept
+   	</select>
+     
+   </mapper>

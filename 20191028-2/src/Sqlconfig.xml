@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 环境 设置默认环境 -->
+	<environments default="j1903">
+		<environment id="j1903">
+			<!-- 事务 JDBC/ MANAGER-->
+			<transactionManager type="JDBC"></transactionManager>
+			<!-- 数据源  使用连接池POOLED / NOPOOLED/JNDI-->
+			<dataSource type="POOLED">
+        <!-- 属性 连接驱动 -->
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+        <!-- 属性 连接字符串 -->
+				<property name="url" value="jdbc:mysql://127.0.0.1:3306/j1903"/>
+        <!-- 属性 数据库信息 -->
+				<property name="username" value="root"/>
+				<property name="password" value="123456"/>
+			</dataSource>
+		</environment>
+		
+	</environments>
+	
+	<!-- 映射文件 -->
+  <mappers>
+     <!-- 映射文件路径 -->
+  	 <mapper resource="com/mybatis/dao/DeptMapper.xml"/>
+  </mappers>
+</configuration>
