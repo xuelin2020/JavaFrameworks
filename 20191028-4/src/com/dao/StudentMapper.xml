@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<!-- 命名空间，可以随意些，只要不冲突 -->
+<mapper namespace="com.dao.StudentMapper">
+	<resultMap type="student" id="myStu">
+	<!-- 主键的映射关系 -->
+		<id column="sno" property="id" javaType="int" />
+		<!-- 其他列的映射关系 -->
+		<result column="sname" property="name" javaType="String" />
+		<result column="ssex" property="sex"/>
+		<result column="sbirthday" property="birthday"/>
+	</resultMap>
+	
+	<select id="getStuByNo" resultMap="myStu" >
+		select * from students where sno = #{sno}
+	</select>
+	
+	<insert id="addStudent" parameterType="student">
+		<selectKey order="AFTER" keyProperty="id"  resultType="int">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into students values (default, #{name}, #{sex}, #{birthday}, #{isstatus})
+	</insert>
+	
+	<insert id="addStudent2" parameterType="student" useGeneratedKeys="true" keyProperty="id">
+		insert into students values (default, #{name}, #{sex}, #{birthday}, #{isstatus})
+	</insert>
+	
+</mapper>

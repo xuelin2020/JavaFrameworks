@@ -66,3 +66,9 @@ public interface DeptMapper {
 }
 
 ```
+
+## 小结
+
+- 如果传一个参数，#{}
+- 如果多个参数，map，key对应…… value对应
+- 

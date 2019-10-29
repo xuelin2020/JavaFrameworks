@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <!-- 配置路径 -->
+	<properties resource="db.properties">
+	<!--  <property name="driver" value="com.mysql.jdbc.Driver"/>-->	
+	</properties>
+	
+	<settings>
+     <!-- 打印 mybatis 日志信息 -->
+		<setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+	
+	<typeAliases>
+		<!--给数据类型起别名-->
+    <package name="com.mybatis.pojo"/>
+	</typeAliases>
+	
+	<environments default="j1903">
+		<environment id="j1903">
+ 			<transactionManager type="JDBC"></transactionManager>
+ 			<dataSource type="POOLED">
+        	<!-- 根据配置文件内容配置属性 -->
+				<property name="driver" value="${jdbc.driver}"/>
+				<property name="url" value="${jdbc.url}"/>
+				<property name="username" value="${jdbc.username}"/>
+				<property name="password" value="${jdbc.password}"/>
+			</dataSource>
+		</environment>
+	</environments>
+  <mappers>
+  	<mapper class="com.mybatis.dao.DeptMapper"/>
+  </mappers>
+</configuration>
