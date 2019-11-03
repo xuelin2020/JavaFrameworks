@@ -12,8 +12,19 @@
 # Spring能解决的问题
 
 - 解耦应用程序，简化开发流程
+
 - AOP支持
+
 - 声明式事务
+
 - 集成junit4
+
 - 方便集成各种开源的优秀框架
+
 - 降低 JavaEE API 的使用难度
+
+ # Spring 的组成
+
+- Framework Moudules
+
+  - ![110552_117j_2348362.png](https://static.oschina.net/uploads/space/2017/0525/110552_117j_2348362.png)

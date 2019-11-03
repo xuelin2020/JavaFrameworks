@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- bean:使容器创建 Person 的对象 -->
+	<!-- name:相当于变量名 Person p = new Person(); -->
+	<!-- class:类的全限定名 -->
+	<bean name="p1" id="p2" class="com.spring.pojo.Person" scope="prototype" ></bean>
+</beans>

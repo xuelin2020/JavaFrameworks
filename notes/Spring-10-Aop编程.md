@@ -1,31 +1,16 @@
 - 创建web项目
-
 - 导包
 
-- 写一个 Service 接口
+- 日志
+
+- 准备一个目标对象
+
+  - 先创建接口，再创建实现类
 
 - ```java
-  package com.service;
+  package com.spring.aop.service;
   
-  public interface IUserService {
-  	
-  	public void save();
-  	public void delete();
-  	public void update();
-  	public void select();
-  	
-  }
-  
-  ```
-
-  
-
-- 写一个接口的实现类
-
-- ```java
-  package com.service;
-  
-  public class UserServiceImpl implements IUserService{
+  public class UserServiceImpl implements UserService{
   
   	@Override
   	public void save() {
@@ -50,10 +35,15 @@
   		
   	}
   }
-  
   ```
 
 - 编写通知
+
+  - 前置通知
+  - 后置通知（如果出现异常就不调用）：在目标方法之后调用
+  - 后置通知（无论是否出现异常都会调用）：在目标方法之后调用
+  - 环绕通知：在目标方法之前、后调用
+  - 异常通知：出现异常则调用
 
 - ```java
   package com.advice;
@@ -90,10 +80,15 @@
   }
   ```
 
-- 回到 Spring ，创建一个 Spring_xml 文件，加入 aop 名称空间
+- 配置织入，将通知织入到目标对象
+
+  - 加入命名空间
 
 - ```
   
   ```
 
   
+
+- 测试
+

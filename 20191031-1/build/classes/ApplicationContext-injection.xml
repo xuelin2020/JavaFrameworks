@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="car" class="com.spring.pojo.Car">
+		<property name="name" value="BMW"></property>
+		<property name="color" value="red"></property>
+	
+	</bean>
+
+
+	<bean name="person1" class="com.spring.pojo.Person">
+		<property name="name" value="helen"></property>
+		<property name="age" value="18"></property>
+		<property name="car" ref="car"></property>
+		
+	</bean>
+	
+	
+	<bean name="person2" class="com.spring.pojo.Person">
+		<constructor-arg name="name" value="Tom"></constructor-arg>
+		<constructor-arg name="car" ref="car"></constructor-arg>
+	</bean>
+	
+	<bean name="person3" class="com.spring.pojo.Person" 
+	p:name="Tom" p:age="19" p:car-ref="car"></bean>
+	
+	<bean name="person4" class="com.spring.pojo.Person">
+		<property name="name" value="#{person1.name}"></property>
+		<property name="age" value="#{person1.age}"></property>
+		<property name="car" ref="car"></property>
+	
+	</bean>
+	
+	<bean name="person5" class="com.spring.pojo.Person">
+		<property name="name" value="Jack"></property>
+		<property name="age" value="30"></property>
+		<property name="car" ref="car"></property>
+		<property name="cars">
+			<array>
+				<value>小车</value>
+				<value>大车</value>
+				<ref bean="car"/>
+			</array>
+		</property>
+		<property name="list">
+			<list>
+				<value>大兵</value>			
+				<value>小兵</value>			
+				<value>老兵</value>			
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>set1</value>
+				<value>set2</value>
+				<value>set3</value>
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="username" value="root"></entry>
+				<entry key="car" value-ref="car"></entry>
+				<entry key-ref="person1" value-ref="car"></entry>
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="username">root</prop>
+				<prop key="password">123456</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>

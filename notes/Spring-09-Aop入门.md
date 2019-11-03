@@ -1,0 +1,16 @@
+- AOP（面向切面编程）
+  - 在软件行业中，AOP为Aspect Oriented Programming的缩写，意为：面向切面编程
+- AOP思想：横向重复、纵向抽取
+- 底层实现
+  - Spring 的AOP的底层用到两种代理机制
+  - JDK的动态代理：针对实现了接口的类产生代理
+  - Cglib 的动态代理：针对没有实现接口的类产生代理，应用的是底层的字节码增强的技术生成当前类的子类对象。
+- AOP 开发中的相关术语
+  - Joinpoint （连接点）
+  - Pointcut（切入点）
+  - Adbice（通知/增强）
+  - Introduction（引介）
+  - Aspect（切面）
+  - Target（目标对象）
+  - Proxy（代理）
+  - Weaving（织入）
