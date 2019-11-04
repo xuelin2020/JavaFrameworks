@@ -1,0 +1,10 @@
+- 创建项目
+- 导包
+- 日志文件
+- 创建数据库表
+  - ar_role表
+- 写测试类
+  - 直接连接c3p0版本
+- 使用DataSourceUtil的版本
+  - 引入c3p0的配置文件，拷贝DataSourceUtil.java类
+  - 写测试用例
