@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- 自定义controller配置url -->
+<bean name="/springmvc/first" class="com.springmvc.controllr.FirstController"></bean>
+<!-- 指定处理器映射器 -->
+<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+<!-- 指定处理器适配器 -->
+<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+<!-- 指定视图解析器 -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
+</beans>

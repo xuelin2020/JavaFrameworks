@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/springmvc/controller/Controller1.java=GBK
+encoding//src/main/java/com/springmvc/interceptors/MyInterceptor.java=GBK
+encoding//src/main/java/com/springmvc/interceptors/MyInterceptor2.java=GBK

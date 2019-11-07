@@ -1,0 +1,3 @@
+- mybatis 持久层：简化工作量、灵活
+- Spring 粘合剂：整合框架、AOP、IOC、DI
+- SpringMVC 表现层：方便前后端数据传输

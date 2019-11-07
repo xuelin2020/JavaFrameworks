@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<context:component-scan base-package="com.springmvc.controller"></context:component-scan>
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/"></property>
+	<property name="suffix" value=".jsp"></property>
+</bean>
+<!-- 配置文件上传的解析器 -->
+<bean  id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	<property name="defaultEncoding" value="utf-8"></property>
+</bean>
+
+<!-- 配置拦截器 -->
+<mvc:interceptors>
+	<mvc:interceptor>
+		<mvc:mapping path="/login/**"/>
+		<mvc:exclude-mapping path="/login/login"/>
+		<mvc:exclude-mapping path="/login/loginCheck"/>
+		<bean class="com.springmvc.interceptors.LoginInterceptor"></bean>
+	</mvc:interceptor>
+	<mvc:interceptor>
+		<!-- 指定要拦截的url -->
+		<mvc:mapping path="/**"/>
+		<!-- 指定在拦截url中哪些路径被排除 -->
+		<!--<mvc:exclude-mapping path="/test/**"/>-->
+	<!--  	<mvc:exclude-mapping path="/test/interceptor3"/>-->
+		<!-- 指定拦截器类 -->
+		<bean class="com.springmvc.interceptors.MyInterceptor"></bean>
+	</mvc:interceptor>
+	<mvc:interceptor>
+		<mvc:mapping path="/test/**"/>
+		<bean class="com.springmvc.interceptors.MyInterceptor2"></bean>
+	</mvc:interceptor>
+</mvc:interceptors>
+<mvc:annotation-driven></mvc:annotation-driven>
+<mvc:default-servlet-handler/>
+</beans>
