@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.qf.smbms.dao.UserDao">
+	<!-- 接口中的每一个方法，在此映射文件中都要有与之关联的SQL语句 -->
+	<!-- 
+		id:对应接口中的方法名
+		patameterType:方法的参数类型
+		对应insert update delete 的返回值默认是int类型，无需设置
+	 -->
+	<insert id="addUser" parameterType="User">
+	    <!-- 编写SQL语句 -->
+	    insert into smbms_user(userCode,userName,userPassword)
+	    values
+	    (#{userCode},#{userName},#{userPassword})
+	</insert>
+	<update id="updateUser" parameterType="User">
+		update smbms_user set userCode=#{userCode},
+		userName=#{userName}
+		where id=#{id}
+	</update>
+	
+	<delete id="deleteUser" parameterType="Integer">
+		delete from smbms_user where id=#{id}
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<!--2、 给实体类命名别名：可以通过别名来使用类，否则需要使用类的完全限定名 -->
+	<typeAliases>
+		<!-- 命名别名方式1 -->
+		<!--
+		<typeAlias type="cn.qf.smbms.pojo.UserRole" alias="UserRole"/>
+		  -->
+		<!-- 方式2： 告知mybatis实体类的位置即可-->
+		<package name="com.xl.pojo"/>
+	</typeAliases>
+	<!--3、配置数据库的连接信息  -->
+	<environments default="mysqldb">
+		<environment id="mysqldb">
+			<!-- 
+			配置事务管理机制
+			JDBC:使用JDBC来管理事务   官方推荐
+			MANAGED:由mybatis进行事务管理
+			 -->
+			<transactionManager type="JDBC">
+				<!-- 设置是否自动提交事务: true  自动提交事务      false 非自动提交 -->
+				<property name="autoCommit" value="true"></property>
+			</transactionManager>
+			<!-- 
+			POOLED:JDBC默认的连接管理
+			 -->
+			<dataSource type="POOLED">
+				<!-- 配置mybatis连接数据库信息 -->
+				<!-- 获取数据库连接信息方式1：通过读取配置文件获取 -->
+				
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url"
+					value="jdbc:mysql://127.0.0.1:3306/j1903" />
+				<property name="username" value="root" />
+				<property name="password" value="123456" />
+			</dataSource>
+		</environment>
+	</environments>
+	<!--4、 配置dao接口的映射文件位置 -->
+	<mappers>
+		<mapper resource="com/xl/dao/deptMapper.xml"></mapper>		
+	</mappers>
+</configuration>
+
+
+
+
